@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<style>
+    .global-container{
+        position: absolute;
+        display:grid;
+        align-items: center;
+        justify-content: center;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        background-color: red;
+    }
+</style>
+{% endblock %}
+{% block message %}
+{% endblock %}
+{% block body %}
+<div class="global-container">
+    <div class="card login-form">
+        <div class="card-body">
+            <div style="color:blue;" class="card-text text-center">
+                Verification Box            </div>
+                <h3 style="color:rgb(4, 255, 4)" class="card-title text-center">{% for message in messages %}{{message}}{% endfor %}</h3>
+        </div>
+    </div>
+</div>
+{% endblock %}
